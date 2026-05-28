@@ -1,2 +1,67 @@
 # Odin_QuantFinance
+
+## 📖 Overview
 Odin_QuantFinance showcases how the Odin programming language can be applied to high‑performance computational workflows, with a focus on quantitative finance and other domains requiring fast, parallel numerical processing and efficient memory management.
+
+---
+
+## ⚡ Features
+- High‑performance implied volatility solver in Odin  
+- Parallel execution across CPU cores  
+- Zero‑copy NumPy integration via DLL bridge  
+- Memory management with **dynamic allocation**, **arena allocators**, and **`defer`** for safe cleanup  
+- 3D volatility surface visualization in Python  
+
+---
+
+## 🛠️ Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/PS-QL/Odin_QuantFinance.git
+   cd Odin_QuantFinance
+
+2. **Compile Odin code to DLL**
+   ```bash
+   odin build vol_3D_surface_lib.odin -file -build-mode:dll
+
+3. **Run Python bridge script**
+   ```bash
+   python bridge_vol_3D_surface.py
+
+---
+
+📂 Project Structure
+- vol_3D_surface_lib.odin → Odin source code (implied volatility solver + parallel surface calculation)
+
+- build_dll.bat → Batch script to compile Odin code into DLL
+
+- bridge_vol_3D_surface.py → Python script to call Odin DLL and plot results
+
+---
+
+📊 Example Output
+The Python script generates a 3D implied volatility surface:
+
+X‑axis → Strike prices
+Y‑axis → Time to maturity
+Z‑axis → Implied volatility (%)
+
+<img width="1536" height="754" alt="vols_surface" src="https://github.com/user-attachments/assets/d07f6b9c-7d08-48a6-af57-b0a6c60cefd3" />
+
+
+---
+
+🔍 Code Highlights
+Odin
+ - @export with "c" calling convention for DLL interoperability
+ - Parallel task execution via thread.Pool
+ - Memory safety with defer and arena allocators
+
+Python
+ - ctypes for DLL loading and argument binding
+ - NumPy arrays passed directly for zero‑copy performance
+ - matplotlib for visualization
+
+---
+
