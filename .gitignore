@@ -14,12 +14,16 @@
 # ====================================================================
 # Ignore the actual permanent/temporary database binary data files
 # (This keeps your massive multi-gigabyte financial archives off GitHub)
-duckdb/*.db
-duckdb/*.db.wal
+#duckdb/*.db
+#duckdb/*.db.wal
+
+
+# Ignore the singleFile folder completely
+singleFile
 
 # Optional: Ignore the exported analytical results spreadsheet
 # (Comment this out with a # if you WANT to commit your final CSV sheets to git)
-duckdb/quant_results.csv
+#duckdb/quant_results.csv
 
 # ====================================================================
 # Windows System & Code Editor Artifacts

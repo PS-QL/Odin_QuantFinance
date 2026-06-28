@@ -83,14 +83,14 @@ Successfully generated execution signals and exported to ./duckdb/quant_results.
 ============================================
    STRATEGY PERFORMANCE BENCHMARK METRICS   
 ============================================
-Total Executed Trade Signals : 2341
-Hypothetical Win Count       : 1162 ✅
-Hypothetical Loss Count      : 1179 ❌
-Strategy Win Ratio           : 49.64%
+Total Executed Trade Signals : 2908
+Hypothetical Win Count       : 2379 ✅
+Hypothetical Loss Count      : 529 ❌
+Strategy Win Ratio           : 81.81%
 --------------------------------------------
-Maximum Strategy Drawdown    : -18.43%
-Automated Sharpe Ratio       : -0.0124
-Automated Sortino Ratio      : -0.0178
+Maximum Strategy Drawdown    : -5.19%
+Automated Sharpe Ratio       : 0.9669
+Automated Sortino Ratio      : 4.0397
 ============================================
 ```
 
